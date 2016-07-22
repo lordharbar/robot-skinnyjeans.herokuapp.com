@@ -7,7 +7,7 @@ const express = require('express');
 const router = express.Router();
 
 //Routes
-router.get('/test', function(req, res, next) {
+router.get('/test', (req, res, next) => {
   res.json({message: 'This is just a test!'});
 });
 

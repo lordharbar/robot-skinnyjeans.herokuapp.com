@@ -22,11 +22,11 @@ app.use('/', express.static('./public'));
 app.use('/api', routes);
 
 // Connection to database
-mongoose.connect(uri, function(err) {
+mongoose.connect(uri, (err) => {
   console.log(err ? 'Connection to MongoDB failed!' : 'Connected to MongoDB at: ', uri);
 });
 
 // Connection to server
-app.listen(port, function(err) {
+app.listen(port, (err) => {
   console.log(err ? 'Connection to Node server failed!' : 'Server listening on port: ', port);
 });
