@@ -12,8 +12,8 @@ function create(req, res) {
 
 function read(req, res) {
   User
-  .findOne({_id: req.params.userId})
-  .populate('favorite_places')
+  .find()
+  .populate('favorite_places', 'name')
   .exec((err, user) => {
     err ? res.status(500).send(err) : res.json(user)
   });

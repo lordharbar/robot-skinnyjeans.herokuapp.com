@@ -4,8 +4,37 @@
     .module('meanApp')
     .controller('homeCtrl', homeCtrl);
 
-    function homeCtrl () {
-      console.log('Home controller is running');
+    homeCtrl.$inject = ['user'];
+    function homeCtrl(user) {
+      init();
+
+      var vm = this;
+
+      vm.user = {
+        name: '',
+        email: '',
+        place: ''
+      };
+
+      vm.createUser = function () {
+        user.create(vm.user)
+          .then(function(user) {
+            readUser();
+          });
+      };
+
+      function init() {
+        readUser();
+      }
+
+      function readUser() {
+        user.read()
+          .then(function(users) {
+            console.log('users: ', users);
+            vm.users = users;
+          });
+      }
+
     }
 
 })();
