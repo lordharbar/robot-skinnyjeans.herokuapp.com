@@ -17,12 +17,12 @@
     "Relationships",
     "Populate"
   ],
-  "author": "Philipp Schulte",
+  "author": "Sam Biggs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/philippschulte/favoritePlaces/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/philippschulte/favoritePlaces#readme",
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cors": "^2.7.1",

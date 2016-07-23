@@ -5,10 +5,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3003;
 
 // DB connection string
-const uri = '';
+const uri = process.env.MONGODB_URI;
 
 // Routes
 const routes = require('./app/routes/api');
