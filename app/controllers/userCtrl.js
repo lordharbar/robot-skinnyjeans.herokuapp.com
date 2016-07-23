@@ -20,7 +20,7 @@ function read(req, res) {
 }
 
 function update(req, res) {
-  User.findByIdAndUpdate(req.params.userId, {$push: {favorite_places: req.body}}, (err, user) => {
+  User.findByIdAndUpdate(req.params.userId, {$push: {favorite_places: req.body.favorite_places}}, (err, user) => {
     err ? res.status(500).send(err) : res.json(user)
   });
 }

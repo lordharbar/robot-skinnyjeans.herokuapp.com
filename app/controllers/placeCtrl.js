@@ -14,7 +14,7 @@ function read(req, res) {
   Place
   .find()
   .exec((err, places) => {
-    err ? res.status(500).send(err) : res.json(place)
+    err ? res.status(500).send(err) : res.json(places)
   });
 }
 
